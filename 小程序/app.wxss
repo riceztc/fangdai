@@ -1,0 +1,119 @@
+/* 全局样式 */
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* 公共样式 */
+.container {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.1);
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #10b981;
+  color: white;
+  border-radius: 16rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+
+.btn-primary:hover {
+  background-color: #0d9668;
+}
+
+.form-item {
+  margin-bottom: 30rpx;
+}
+
+.form-label {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+
+.form-input {
+  background-color: #f9fafb;
+  border: 1rpx solid #e5e7eb;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.radio-group {
+  display: flex;
+  background-color: #f3f4f6;
+  border-radius: 12rpx;
+  padding: 8rpx;
+  margin-bottom: 30rpx;
+}
+
+.radio-item {
+  flex: 1;
+  text-align: center;
+  padding: 16rpx 0;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.radio-item.active {
+  background-color: #fff;
+  color: #10b981;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 20rpx;
+}
+
+.grid-cols-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20rpx;
+}
+
+.btn-option {
+  background-color: #fff;
+  border: 1rpx solid #e5e7eb;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+}
+
+.btn-option.active {
+  background-color: #ecfdf5;
+  border-color: #10b981;
+  color: #10b981;
+  font-weight: bold;
+}

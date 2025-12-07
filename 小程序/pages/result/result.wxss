@@ -1,0 +1,161 @@
+/* 结果卡片 */
+.result-card {
+  position: relative;
+  margin-top: 40rpx;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.reset-btn {
+  font-size: 28rpx;
+  color: #10b981;
+  font-weight: normal;
+}
+
+/* 主要数字 */
+.main-number {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.main-label {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.main-value {
+  font-size: 80rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.decrease-hint {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+/* 详情网格 */
+.details-grid {
+  margin-bottom: 60rpx;
+}
+
+.detail-item {
+  background-color: #f9fafb;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  text-align: center;
+}
+
+.detail-label {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+
+.detail-value {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 还款计划表格 */
+.repayment-schedule {
+  margin-top: 40rpx;
+}
+
+.schedule-header {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.table-container {
+  border: 1rpx solid #e5e7eb;
+  border-radius: 12rpx;
+  overflow: hidden;
+  max-height: 600rpx;
+}
+
+.table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-header {
+  display: flex;
+  background-color: #f3f4f6;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table-row {
+  display: flex;
+  border-top: 1rpx solid #e5e7eb;
+}
+
+.table-row:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.table-cell {
+  padding: 16rpx 8rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #333;
+  border-right: 1rpx solid #e5e7eb;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 第1列：期数 - 较窄 */
+.table-cell:nth-child(1) {
+  flex: 0.8;
+  min-width: 80rpx;
+}
+
+/* 第2列：月供 - 较宽 */
+.table-cell:nth-child(2) {
+  flex: 1.2;
+  min-width: 120rpx;
+}
+
+/* 第3列：本金 - 中等 */
+.table-cell:nth-child(3) {
+  flex: 1;
+  min-width: 100rpx;
+}
+
+/* 第4列：利息 - 中等 */
+.table-cell:nth-child(4) {
+  flex: 1;
+  min-width: 100rpx;
+}
+
+/* 第5列：剩余本金 - 较宽 */
+.table-cell:nth-child(5) {
+  flex: 1.2;
+  min-width: 120rpx;
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+.header-cell {
+  background-color: #f3f4f6;
+  font-weight: bold;
+  color: #374151;
+}

@@ -1,0 +1,133 @@
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="header-bg"></view>
+    <view class="header-content">
+      <view class="title">房贷计算器</view>
+      <view class="subtitle">轻松计算，买房无忧</view>
+    </view>
+  </view>
+
+  <!-- 表单卡片 -->
+  <view class="card form-card">
+    <!-- 贷款类型选择 -->
+    <view class="form-item">
+      <view class="radio-group">
+        <view 
+          class="radio-item {{loanType === '商业贷款' ? 'active' : ''}}" 
+          bindtap="changeLoanType" 
+          data-type="商业贷款"
+        >
+          商业贷款
+        </view>
+        <view 
+          class="radio-item {{loanType === '公积金贷款' ? 'active' : ''}}" 
+          bindtap="changeLoanType" 
+          data-type="公积金贷款"
+        >
+          公积金贷款
+        </view>
+        <view 
+          class="radio-item {{loanType === '组合贷款' ? 'active' : ''}}" 
+          bindtap="changeLoanType" 
+          data-type="组合贷款"
+        >
+          组合贷款
+        </view>
+      </view>
+    </view>
+
+    <!-- 商业贷款金额 -->
+    <view wx:if="{{loanType === '商业贷款' || loanType === '组合贷款'}}" class="form-item">
+      <view class="form-label">商业贷款金额 (万元)</view>
+      <view class="input-group">
+        <input 
+          type="text" 
+          class="form-input" 
+          placeholder="请输入金额"
+          value="{{amountCommercial}}" 
+          bindinput="onAmountCommercialChange"
+        />
+        <view class="input-suffix">万</view>
+      </view>
+      <view class="rate-row">
+        <view class="rate-label">商贷利率 (%)</view>
+        <input 
+          type="text" 
+          class="rate-input" 
+          placeholder="请输入利率"
+          value="{{rateCommercial}}" 
+          bindinput="onRateCommercialChange"
+        />
+      </view>
+    </view>
+
+    <!-- 公积金贷款金额 -->
+    <view wx:if="{{loanType === '公积金贷款' || loanType === '组合贷款'}}" class="form-item">
+      <view class="form-label">公积金贷款金额 (万元)</view>
+      <view class="input-group">
+        <input 
+          type="text" 
+          class="form-input" 
+          placeholder="请输入金额"
+          value="{{amountProvident}}" 
+          bindinput="onAmountProvidentChange"
+        />
+        <view class="input-suffix">万</view>
+      </view>
+      <view class="rate-row">
+        <view class="rate-label">公积金利率 (%)</view>
+        <input 
+          type="text" 
+          class="rate-input" 
+          placeholder="请输入利率"
+          value="{{rateProvident}}" 
+          bindinput="onRateProvidentChange"
+        />
+      </view>
+    </view>
+
+    <!-- 贷款年限 -->
+    <view class="form-item">
+      <view class="form-label">贷款期限 (月)</view>
+      <view class="input-group">
+        <input 
+          type="number" 
+          class="form-input" 
+          placeholder="请输入贷款期限"
+          value="{{months}}" 
+          bindinput="onMonthsChange"
+        />
+        <view class="input-suffix">月</view>
+      </view>
+    </view>
+
+    <!-- 还款方式 -->
+    <view class="form-item">
+      <view class="form-label">还款方式</view>
+      <view class="grid grid-cols-2">
+        <view 
+          class="btn-option payment-method {{repaymentMethod === '等额本息' ? 'active' : ''}}"
+          bindtap="changeRepaymentMethod"
+          data-method="等额本息"
+        >
+          <view class="payment-title">等额本息</view>
+          <view class="payment-desc">每月还款额固定</view>
+        </view>
+        <view 
+          class="btn-option payment-method {{repaymentMethod === '等额本金' ? 'active' : ''}}"
+          bindtap="changeRepaymentMethod"
+          data-method="等额本金"
+        >
+          <view class="payment-title">等额本金</view>
+          <view class="payment-desc">总利息较少</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 计算按钮 -->
+  <button class="btn-primary calculate-btn" bindtap="handleCalculate">
+    开始计算
+  </button>
+</view>
